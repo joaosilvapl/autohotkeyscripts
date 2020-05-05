@@ -4,6 +4,7 @@ SetBatchLines, -1
 AutoTrim, Off       
 
 
+^!F7::ShowApp("Onenote.exe", null)
 ^!F8::ShowApp("Code.exe", null)
 ^!F9::ShowApp("OUTLOOK.exe", "Inbox -")
 ^!F10::ShowApp("OUTLOOK.exe", "Calendar -")
