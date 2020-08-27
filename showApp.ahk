@@ -4,15 +4,18 @@ SetBatchLines, -1
 AutoTrim, Off       
 
 
-^!F7::ShowApp("Onenote.exe", null)
-^!F8::ShowApp("Code.exe", null)
-^!F9::ShowApp("OUTLOOK.exe", "Inbox -")
-^!F10::ShowApp("OUTLOOK.exe", "Calendar -")
-^!F11::ShowApp("Teams.exe", null)
-^!F12::ShowApp("chrome.exe", null)
+^!F5::ShowApp("doublecmd.exe", null, null)
+;F6 is used on another script
+^!F7::ShowApp("Onenote.exe", null, null)
+^!F8::ShowApp("Code.exe", null, null)
+^!Left::ShowApp("OUTLOOK.exe", "Inbox -", null)
+^!Down::ShowApp("OUTLOOK.exe", "Calendar -", null)
+^!Right::ShowApp("Teams.exe", null, null)
+^!Up::ShowApp("chrome.exe", null, null)
+^!Numpad0::ShowApp("firefox.exe", null, null)
 
 
-ShowApp(processName, windowTitle) {
+ShowApp(processName, windowTitle, windowTitle2) {
 
 	if (WinExist("ahk_exe " . processName)){
 		WinGet, winIds, List, ahk_exe %processName%

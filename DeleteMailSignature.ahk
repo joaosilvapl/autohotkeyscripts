@@ -1,8 +1,9 @@
 #SingleInstance force
+SetBatchLines, 20ms
 
 ^+j::
 
-Loop 11 {
+Loop 12 {
     Send +{Down}
 }
 
